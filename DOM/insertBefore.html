@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before DOM</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Wall</li>
+        <li>Friends</li>
+    </ul>
+
+    <script>
+        let menu = document.getElementById('menu');
+        let li = document.createElement('li');
+        li.textContent = "Messages";
+        menu.insertBefore(li,menu.firstChild.nextSibling);
+        let li1 = document.createElement('li');
+        li1.textContent="Settings";
+        menu.insertBefore(li1,menu.firstChild.nextSibling);
+        
+    </script>
+</body>
+</html>
